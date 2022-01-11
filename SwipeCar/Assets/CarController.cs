@@ -6,6 +6,7 @@ public class CarController : MonoBehaviour
 {
     float speed = 0;
     // Start is called before the first frame update
+    Vector2 startPos;
     void Start()
     {
         
@@ -15,7 +16,12 @@ public class CarController : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            this.speed = 0.05f;
+            this.startPos = Input.mousePosition;
+        } else if (Input.GetMouseButtonUp(0)) {
+            Vector2 endPos = Input.mousePosition;
+            float swipeLength = endPos.x - this.startPos.x;
+
+            this.speed = swipeLength / 50000.0f;
         }
 
         transform.Translate(this.speed, 0, 0);
