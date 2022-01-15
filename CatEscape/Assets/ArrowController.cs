@@ -28,6 +28,8 @@ public class ArrowController : MonoBehaviour
         float r1 = 0.5f, r2 = 0.85f; // 각각 화살과 플레이어의 반지름
 
         if (d <= r1+r2) {
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DescreaseHp();
             Destroy(gameObject);
         }
     }
