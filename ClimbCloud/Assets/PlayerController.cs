@@ -36,5 +36,11 @@ public class PlayerController : MonoBehaviour
         if (key != 0) transform.localScale = new Vector3(key, 1, 1);
 
         this.animator.speed = speedx / 2.0f;
+
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("CLEAR");
     }
 }
