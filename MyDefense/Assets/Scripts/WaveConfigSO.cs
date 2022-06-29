@@ -8,9 +8,9 @@ public class WaveConfigSO : ScriptableObject
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
 
-    public Transform GetStartingWaypoint() {
-        return pathPrefab.GetChild(0);
-    }
+    // public Transform GetStartingWaypoint() {
+    //     return pathPrefab.GetChild(0);
+    // }
 
     public List<Transform> GetWaypoints() {
         List<Transform> waypoints = new List<Transform>();
@@ -22,16 +22,5 @@ public class WaveConfigSO : ScriptableObject
 
     public float GetMoveSpeed() {
         return moveSpeed;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
