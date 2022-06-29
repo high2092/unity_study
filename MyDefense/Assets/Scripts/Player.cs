@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] float moveSpeed = 5f;
     Vector2 rawInput;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
+    }
+
+    private void Move()
+    {
+        Vector3 delta = rawInput * moveSpeed * Time.deltaTime;
+        transform.position += delta;
     }
 
     void OnMove(InputValue value) {
