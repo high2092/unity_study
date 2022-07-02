@@ -7,6 +7,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     Vector2 rawInput;
+
+    Shooter shooter;
+
+    void Awake() {
+        shooter = GetComponent<Shooter>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +33,12 @@ public class Player : MonoBehaviour
 
     void OnMove(InputValue value) {
         rawInput = value.Get<Vector2>();
-        Debug.Log(rawInput);
+        // Debug.Log(rawInput);
+    }
+
+    void OnFire(InputValue value) {
+        if (shooter) {
+            shooter.isFiring = value.isPressed;
+        }
     }
 }

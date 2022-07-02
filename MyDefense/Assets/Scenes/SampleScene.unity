@@ -515,7 +515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9f09283e80935479123342d5166e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWave: {fileID: 11400000, guid: 351673156c5565242950eab46785eb02, type: 2}
+  waveConfigs:
+  - {fileID: 11400000, guid: 351673156c5565242950eab46785eb02, type: 2}
+  - {fileID: 11400000, guid: b14a5cf7ebd75e5418b7e06ff27be53f, type: 2}
+  waveDelay: 1
 --- !u!4 &1590427610
 Transform:
   m_ObjectHideFlags: 0
@@ -530,6 +533,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1778396890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3174340676713760431, guid: 2c7f2570ddc668a40b09e6f120bcea50, type: 3}
+  m_PrefabInstance: {fileID: 3174340675510369863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778396897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778396890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60292a0150cf076438941d0d1151c3d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6025240891610615769, guid: 04076847c7a47fd4c86712d962463e2f, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 3
+  firingRate: 1
+  isFiring: 0
 --- !u!1 &1797545945
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,5 +15,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 3355278056774563560, guid: 5d40b20f50c2ec647b1073441851d3c3, type: 3}
   - {fileID: 3355278056774563560, guid: 5d40b20f50c2ec647b1073441851d3c3, type: 3}
-  pathPrefab: {fileID: 4921579092012371136, guid: cbc5423d33027154ba53a14ea6933034, type: 3}
+  pathPrefab: {fileID: 4921579092012371136, guid: 2d4006dffeef9f2498fe7c59ff692896, type: 3}
   moveSpeed: 1
+  spawnDelay: 1
+  spawnDelayVariance: 0
