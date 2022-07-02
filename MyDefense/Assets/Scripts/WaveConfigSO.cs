@@ -9,7 +9,8 @@ public class WaveConfigSO : ScriptableObject
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float spawnDelay = 1f;
-    [SerializeField] float spawnDelayVariance = 0f; // 랜덤성
+    [SerializeField] float spawnDelayVariance = 0f; // 스폰주기 랜덤화
+    
 
     public Transform GetStartingWaypoint() {
         return pathPrefab.GetChild(0);
