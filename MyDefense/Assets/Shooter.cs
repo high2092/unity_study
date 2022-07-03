@@ -8,6 +8,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
     [SerializeField] float firingRate = 2f;
+    [SerializeField] float delayToReady = 1f;
 
     Coroutine firingCoroutine;
     public bool isFiring;
@@ -33,8 +34,9 @@ public class Shooter : MonoBehaviour
     }
 
     IEnumerator FireContinuously() {
+        yield return new WaitForSeconds(delayToReady);
         while (true) {
-            GameObject instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            GameObject instance = Instantiate(projectilePrefab, transform.position+new Vector3(0, 0.2f, 0), Quaternion.identity);
 
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
             if (rb != null) {
